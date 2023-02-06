@@ -1,4 +1,4 @@
-export default function MoreIcon() {
+export default function MoreIcon({ active }) {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -7,7 +7,7 @@ export default function MoreIcon() {
             fill="none"
             viewBox="0 0 30 30"
         >
-            <g stroke="#fff" opacity="0.4">
+            <g className={`${active ? 'stroke-white' : 'stroke-white/40'}`}>
                 <path
                     strokeLinecap="round"
                     strokeLinejoin="round"

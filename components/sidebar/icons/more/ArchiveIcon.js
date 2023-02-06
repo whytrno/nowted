@@ -1,4 +1,4 @@
-export default function ArchiveIcon() {
+export default function ArchiveIcon({ active }) {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -8,7 +8,7 @@ export default function ArchiveIcon() {
             viewBox="0 0 20 20"
         >
             <path
-                stroke="#fff"
+                className={`${active ? 'stroke-white' : 'stroke-white/60'}`}
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeOpacity="0.6"

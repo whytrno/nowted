@@ -97,7 +97,7 @@
   dependencies:
     "tslib" "^2.4.0"
 
-"@tiptap/core@^2.0.0-beta.1", "@tiptap/core@^2.0.0-beta.209", "@tiptap/core@^2.0.0-beta.212":
+"@tiptap/core@^2.0.0-beta.1", "@tiptap/core@^2.0.0-beta.116", "@tiptap/core@^2.0.0-beta.209", "@tiptap/core@^2.0.0-beta.212":
   "integrity" "sha512-aQbeTJiR3wtqCNXyrFnRBjBT4F0kQrHGSOJyj5lWnEetImprJNgg2DbX8Yu5odh9CRcYVtAoWKdEdnyvtMhzAQ=="
   "resolved" "https://registry.npmjs.org/@tiptap/core/-/core-2.0.0-beta.212.tgz"
   "version" "2.0.0-beta.212"
@@ -177,10 +177,22 @@
   "resolved" "https://registry.npmjs.org/@tiptap/extension-horizontal-rule/-/extension-horizontal-rule-2.0.0-beta.212.tgz"
   "version" "2.0.0-beta.212"
 
+"@tiptap/extension-image@^2.0.0-beta.212":
+  "integrity" "sha512-F/3N3Er57shgfIfavAQoTy5E0C1cJivQ0VyG/gfxzjMPfUdPJdECv9W5V0KZ41VGwKtDyu7nmvR6vsqcTYx9Ww=="
+  "resolved" "https://registry.npmjs.org/@tiptap/extension-image/-/extension-image-2.0.0-beta.212.tgz"
+  "version" "2.0.0-beta.212"
+
 "@tiptap/extension-italic@^2.0.0-beta.212":
   "integrity" "sha512-sLsRojqIIjpGapxxRxoc2IwcJtn3+eYwyenNjX7xl/GIsfTEJ3uOehxS5GZSAJwiWVtQAAAQunSfmPZAHTxdRw=="
   "resolved" "https://registry.npmjs.org/@tiptap/extension-italic/-/extension-italic-2.0.0-beta.212.tgz"
   "version" "2.0.0-beta.212"
+
+"@tiptap/extension-link@^2.0.0-beta.212":
+  "integrity" "sha512-FRhJHBIYpObrZXWvLgLW3lx+GYnkOJsJrkrKqkS5t5MdGDpsreKgqkxA06tQjNYx13xkt2HeaeUIuQENiB1d4Q=="
+  "resolved" "https://registry.npmjs.org/@tiptap/extension-link/-/extension-link-2.0.0-beta.212.tgz"
+  "version" "2.0.0-beta.212"
+  dependencies:
+    "linkifyjs" "^3.0.5"
 
 "@tiptap/extension-list-item@^2.0.0-beta.212":
   "integrity" "sha512-I028s1mc60QcYTZ6quWzCBiZpQczTfhWtzoDZ5tsqQrlEENpSo6g1ktHhgw8AyGK1e9w/ZbxQkFqno+HpZLuWw=="
@@ -220,6 +232,11 @@
 "@tiptap/extension-table@^2.0.0-beta.212":
   "integrity" "sha512-gVmCcQuTn62nBPYaXqVbJL91+xXU7uHH3+PyaV6eBcUTLkWf2zNNoBzRQ7EeCn55eFUGrJ1fXgLfICuI51TdPg=="
   "resolved" "https://registry.npmjs.org/@tiptap/extension-table/-/extension-table-2.0.0-beta.212.tgz"
+  "version" "2.0.0-beta.212"
+
+"@tiptap/extension-text-style@^2.0.0-beta.17", "@tiptap/extension-text-style@^2.0.0-beta.212":
+  "integrity" "sha512-z8UMzM4VYFJOZBx3ndjKj90LNYf/uxovHPMACgDQZeSlB21PWIEqco2kBNMPYzziAFIwKFRwKZj4+P7RPNVW8g=="
+  "resolved" "https://registry.npmjs.org/@tiptap/extension-text-style/-/extension-text-style-2.0.0-beta.212.tgz"
   "version" "2.0.0-beta.212"
 
 "@tiptap/extension-text@^2.0.0-beta.212":
@@ -613,6 +630,11 @@
   "version" "4.0.1"
   dependencies:
     "uc.micro" "^1.0.1"
+
+"linkifyjs@^3.0.5":
+  "integrity" "sha512-1Y9XQH65eQKA9p2xtk+zxvnTeQBG7rdAXSkUG97DmuI/Xhji9uaUzaWxRj6rf9YC0v8KKHkxav7tnLX82Sz5Fg=="
+  "resolved" "https://registry.npmjs.org/linkifyjs/-/linkifyjs-3.0.5.tgz"
+  "version" "3.0.5"
 
 "lodash@^4.17.21":
   "integrity" "sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg=="
@@ -1104,6 +1126,14 @@
   "version" "6.3.7"
   dependencies:
     "@popperjs/core" "^2.9.0"
+
+"tiptap-extension-font-size@^1.2.0":
+  "integrity" "sha512-akVve/bIAhAf4ze6XR4sh0qV7o7XgAoPkDGumTj4SFNtjhcH61wD97ibxWQAXchJPNAV6DdzRJiuUtEgzspjyA=="
+  "resolved" "https://registry.npmjs.org/tiptap-extension-font-size/-/tiptap-extension-font-size-1.2.0.tgz"
+  "version" "1.2.0"
+  dependencies:
+    "@tiptap/core" "^2.0.0-beta.116"
+    "@tiptap/extension-text-style" "^2.0.0-beta.17"
 
 "to-regex-range@^5.0.1":
   "integrity" "sha512-65P7iz6X5yEr1cwcgvQxbbIw7Uk3gOy5dIdtZ4rDveLqhrdJP+Li/Hx6tyK0NEb+2GCyneCMJiGqrADCSNk8sQ=="
