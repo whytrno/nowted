@@ -1,0 +1,249 @@
+{
+    "folders": [
+        {
+            "id": 1,
+            "active": true,
+            "name": "Personal",
+            "notes": [
+                {
+                    "id": 1,
+                    "active": false,
+                    "title": "1 My Goals for the Next Year",
+                    "date": "31/12/2022",
+                    "content": "No one shall be subjected to arbitrary arrest, detention or exile. Everyone is entitled in full equality to a fair and public hearing by an independent and impartial tribunal, in the determination of his rights and obligations and of any criminal charge against him. No one shall be subjected to arbitrary interference with his privacy, family, home or correspondence, nor to attacks upon his honour and reputation. Everyone has the right to the protection of the law against such interference or attacks. Everyone has the right to freedom of thought, conscience and religion; this right includes freedom to change his religion or belief, and freedom, either alone or in community with others and in public or private, to manifest his religion or belief in teaching, practice, worship and observance. Everyone has the right to freedom of opinion and expression; this right includes freedom to hold opinions without interference and to seek, receive and impart information and ideas through any media and regardless of frontiers. Everyone has the right to rest and leisure, including reasonable limitation of working hours and periodic holidays with pay."
+                },
+                {
+                    "id": 2,
+                    "active": true,
+                    "title": "Reflection on the Month of June",
+                    "date": "21/06/2022",
+                    "content": "Great content comes with great effort. Any organization on its way to creating a marketing strategy cannot ignore content today. This blog will focus on collating some winning content marketing examples, best practices used in the industry, and content writing tools that will make your job as a content marketer easy.A fantastic visionary that he is, Bill Gates could see deep into the future. In an essay written in 1996, he wrote with conviction about how content is king. In 2022, the COVID-19 pandemic and the resultant “new normal” have drastically changed the way people buy, sell, and work across the globe. Businesses have no option but to adapt and change. This entire situation has propelled the online space to the stature of a marketing hub. We are at a point where leading organizations across the globe are adopting content-led marketing strategies. "
+                },
+                {
+                    "id": 3,
+                    "active": false,
+                    "title": "My Favorite Memories from Childhood",
+                    "date": "11/04/2022",
+                    "content": "Content writing is the art and science of creating content for the digital medium. Yes, you read that right. It is a finely crafted art as much as it is science. Why do we say that? Well, you will agree that writing is an art form. It requires someone to logically and meticulously put together thoughts into a coherent, readable format. But why is it a science? Because every piece of writing needs to have a structure. It must present a point of view in a well-framed, grammatically correct manner. The best content comes from a great mix of these two traits. Organizations use data to analyze customer behavior. They study what their customers are searching for and what kind of content they are likely to consume. Then, this insightful data is used to plan and create relevant and meaningful content for their customers. While science defines what needs to be written, it is the art and craft of writing that helps create highly readable and engaging content."
+                },
+                {
+                    "id": 4,
+                    "active": false,
+                    "title": "Reflections on My First Year of College",
+                    "date": "08/04/2022",
+                    "content": "While this list does not cover the vast ocean of content writing possibilities, it will give you an idea of what comes within its purview. From technology to recipes, from education to entertainment, from food to science, content can be created for any topic under the sun and beyond. We have already established that content is the key marketing tool for any organization in today’s world. What, when, and who to write for is defined by an organization’s marketing strategy. Organizations or individuals setting out to make their mark must ensure that their content is customer-centric. This calls for a deep understanding of customer behavior, both online and offline. Brands have moved away from talking about what they can do for their customers. Instead, they speak about what the customer would like to hear within the context of their brand. In the highly competitive online space, content must be interesting and unusual to retain customer interest. The challenge is to create such content consistently."
+                },
+                {
+                    "id": 5,
+                    "active": false,
+                    "title": "My Experience with Meditation",
+                    "date": "24/03/2022",
+                    "content": "The iconic Amul girl graduated seamlessly from the traditional print advertising medium to the online space. This helped the brand stay connected with their customers while adding a new base of a younger audience. By maintaining the style and tone of its content in the online space, the company has earned the love and respect of its audience. Their communication is always topical, offering a brilliant mix of humor and current affairs. The brand also has frequent contests in its online space to keep its customers engaged and entertained. It is one of the best content writing examples."
+                },
+                {
+                    "id": 6,
+                    "active": false,
+                    "title": "Thoughts on the Pandemic",
+                    "date": "01/02/2021",
+                    "content": "A product of the e-commerce boom in India, Flipkart is a relatively new entrant to the market. However, they are in a highly competitive space, and they understood early on that they must follow the customer journey from research to actual purchase. User-generated content like customer reviews and recommendations forms an integral part of their content strategy. They maintain an active social media presence across all channels and ensure constant interaction with their customers through contests. Their Big Billion Day sale is a brand by itself, and customers withhold their purchases as they wait for this sale, much like the iconic Black Friday sale."
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "active": false,
+            "name": "Work",
+            "notes": [
+                {
+                    "id": 1,
+                    "active": false,
+                    "title": "2 My Goals for the Next Year",
+                    "date": "31/12/2022",
+                    "content": "No one shall be subjected to arbitrary arrest, detention or exile. Everyone is entitled in full equality to a fair and public hearing by an independent and impartial tribunal, in the determination of his rights and obligations and of any criminal charge against him. No one shall be subjected to arbitrary interference with his privacy, family, home or correspondence, nor to attacks upon his honour and reputation. Everyone has the right to the protection of the law against such interference or attacks. Everyone has the right to freedom of thought, conscience and religion; this right includes freedom to change his religion or belief, and freedom, either alone or in community with others and in public or private, to manifest his religion or belief in teaching, practice, worship and observance. Everyone has the right to freedom of opinion and expression; this right includes freedom to hold opinions without interference and to seek, receive and impart information and ideas through any media and regardless of frontiers. Everyone has the right to rest and leisure, including reasonable limitation of working hours and periodic holidays with pay."
+                },
+                {
+                    "id": 2,
+                    "active": true,
+                    "title": "Reflection on the Month of June",
+                    "date": "21/06/2022",
+                    "content": "Great content comes with great effort. Any organization on its way to creating a marketing strategy cannot ignore content today. This blog will focus on collating some winning content marketing examples, best practices used in the industry, and content writing tools that will make your job as a content marketer easy.A fantastic visionary that he is, Bill Gates could see deep into the future. In an essay written in 1996, he wrote with conviction about how content is king. In 2022, the COVID-19 pandemic and the resultant “new normal” have drastically changed the way people buy, sell, and work across the globe. Businesses have no option but to adapt and change. This entire situation has propelled the online space to the stature of a marketing hub. We are at a point where leading organizations across the globe are adopting content-led marketing strategies. "
+                },
+                {
+                    "id": 3,
+                    "active": false,
+                    "title": "My Favorite Memories from Childhood",
+                    "date": "11/04/2022",
+                    "content": "Content writing is the art and science of creating content for the digital medium. Yes, you read that right. It is a finely crafted art as much as it is science. Why do we say that? Well, you will agree that writing is an art form. It requires someone to logically and meticulously put together thoughts into a coherent, readable format. But why is it a science? Because every piece of writing needs to have a structure. It must present a point of view in a well-framed, grammatically correct manner. The best content comes from a great mix of these two traits. Organizations use data to analyze customer behavior. They study what their customers are searching for and what kind of content they are likely to consume. Then, this insightful data is used to plan and create relevant and meaningful content for their customers. While science defines what needs to be written, it is the art and craft of writing that helps create highly readable and engaging content."
+                },
+                {
+                    "id": 4,
+                    "active": false,
+                    "title": "Reflections on My First Year of College",
+                    "date": "08/04/2022",
+                    "content": "While this list does not cover the vast ocean of content writing possibilities, it will give you an idea of what comes within its purview. From technology to recipes, from education to entertainment, from food to science, content can be created for any topic under the sun and beyond. We have already established that content is the key marketing tool for any organization in today’s world. What, when, and who to write for is defined by an organization’s marketing strategy. Organizations or individuals setting out to make their mark must ensure that their content is customer-centric. This calls for a deep understanding of customer behavior, both online and offline. Brands have moved away from talking about what they can do for their customers. Instead, they speak about what the customer would like to hear within the context of their brand. In the highly competitive online space, content must be interesting and unusual to retain customer interest. The challenge is to create such content consistently."
+                },
+                {
+                    "id": 5,
+                    "active": false,
+                    "title": "My Experience with Meditation",
+                    "date": "24/03/2022",
+                    "content": "The iconic Amul girl graduated seamlessly from the traditional print advertising medium to the online space. This helped the brand stay connected with their customers while adding a new base of a younger audience. By maintaining the style and tone of its content in the online space, the company has earned the love and respect of its audience. Their communication is always topical, offering a brilliant mix of humor and current affairs. The brand also has frequent contests in its online space to keep its customers engaged and entertained. It is one of the best content writing examples."
+                },
+                {
+                    "id": 6,
+                    "active": false,
+                    "title": "Thoughts on the Pandemic",
+                    "date": "01/02/2021",
+                    "content": "A product of the e-commerce boom in India, Flipkart is a relatively new entrant to the market. However, they are in a highly competitive space, and they understood early on that they must follow the customer journey from research to actual purchase. User-generated content like customer reviews and recommendations forms an integral part of their content strategy. They maintain an active social media presence across all channels and ensure constant interaction with their customers through contests. Their Big Billion Day sale is a brand by itself, and customers withhold their purchases as they wait for this sale, much like the iconic Black Friday sale."
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "active": false,
+            "name": "Travel",
+            "notes": [
+                {
+                    "id": 1,
+                    "active": false,
+                    "title": "3 My Goals for the Next Year",
+                    "date": "31/12/2022",
+                    "content": "No one shall be subjected to arbitrary arrest, detention or exile. Everyone is entitled in full equality to a fair and public hearing by an independent and impartial tribunal, in the determination of his rights and obligations and of any criminal charge against him. No one shall be subjected to arbitrary interference with his privacy, family, home or correspondence, nor to attacks upon his honour and reputation. Everyone has the right to the protection of the law against such interference or attacks. Everyone has the right to freedom of thought, conscience and religion; this right includes freedom to change his religion or belief, and freedom, either alone or in community with others and in public or private, to manifest his religion or belief in teaching, practice, worship and observance. Everyone has the right to freedom of opinion and expression; this right includes freedom to hold opinions without interference and to seek, receive and impart information and ideas through any media and regardless of frontiers. Everyone has the right to rest and leisure, including reasonable limitation of working hours and periodic holidays with pay."
+                },
+                {
+                    "id": 2,
+                    "active": true,
+                    "title": "Reflection on the Month of June",
+                    "date": "21/06/2022",
+                    "content": "Great content comes with great effort. Any organization on its way to creating a marketing strategy cannot ignore content today. This blog will focus on collating some winning content marketing examples, best practices used in the industry, and content writing tools that will make your job as a content marketer easy.A fantastic visionary that he is, Bill Gates could see deep into the future. In an essay written in 1996, he wrote with conviction about how content is king. In 2022, the COVID-19 pandemic and the resultant “new normal” have drastically changed the way people buy, sell, and work across the globe. Businesses have no option but to adapt and change. This entire situation has propelled the online space to the stature of a marketing hub. We are at a point where leading organizations across the globe are adopting content-led marketing strategies. "
+                },
+                {
+                    "id": 3,
+                    "active": false,
+                    "title": "My Favorite Memories from Childhood",
+                    "date": "11/04/2022",
+                    "content": "Content writing is the art and science of creating content for the digital medium. Yes, you read that right. It is a finely crafted art as much as it is science. Why do we say that? Well, you will agree that writing is an art form. It requires someone to logically and meticulously put together thoughts into a coherent, readable format. But why is it a science? Because every piece of writing needs to have a structure. It must present a point of view in a well-framed, grammatically correct manner. The best content comes from a great mix of these two traits. Organizations use data to analyze customer behavior. They study what their customers are searching for and what kind of content they are likely to consume. Then, this insightful data is used to plan and create relevant and meaningful content for their customers. While science defines what needs to be written, it is the art and craft of writing that helps create highly readable and engaging content."
+                },
+                {
+                    "id": 4,
+                    "active": false,
+                    "title": "Reflections on My First Year of College",
+                    "date": "08/04/2022",
+                    "content": "While this list does not cover the vast ocean of content writing possibilities, it will give you an idea of what comes within its purview. From technology to recipes, from education to entertainment, from food to science, content can be created for any topic under the sun and beyond. We have already established that content is the key marketing tool for any organization in today’s world. What, when, and who to write for is defined by an organization’s marketing strategy. Organizations or individuals setting out to make their mark must ensure that their content is customer-centric. This calls for a deep understanding of customer behavior, both online and offline. Brands have moved away from talking about what they can do for their customers. Instead, they speak about what the customer would like to hear within the context of their brand. In the highly competitive online space, content must be interesting and unusual to retain customer interest. The challenge is to create such content consistently."
+                },
+                {
+                    "id": 5,
+                    "active": false,
+                    "title": "My Experience with Meditation",
+                    "date": "24/03/2022",
+                    "content": "The iconic Amul girl graduated seamlessly from the traditional print advertising medium to the online space. This helped the brand stay connected with their customers while adding a new base of a younger audience. By maintaining the style and tone of its content in the online space, the company has earned the love and respect of its audience. Their communication is always topical, offering a brilliant mix of humor and current affairs. The brand also has frequent contests in its online space to keep its customers engaged and entertained. It is one of the best content writing examples."
+                },
+                {
+                    "id": 6,
+                    "active": false,
+                    "title": "Thoughts on the Pandemic",
+                    "date": "01/02/2021",
+                    "content": "A product of the e-commerce boom in India, Flipkart is a relatively new entrant to the market. However, they are in a highly competitive space, and they understood early on that they must follow the customer journey from research to actual purchase. User-generated content like customer reviews and recommendations forms an integral part of their content strategy. They maintain an active social media presence across all channels and ensure constant interaction with their customers through contests. Their Big Billion Day sale is a brand by itself, and customers withhold their purchases as they wait for this sale, much like the iconic Black Friday sale."
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "active": false,
+            "name": "Events",
+            "notes": [
+                {
+                    "id": 1,
+                    "active": false,
+                    "title": "4 My Goals for the Next Year",
+                    "date": "31/12/2022",
+                    "content": "No one shall be subjected to arbitrary arrest, detention or exile. Everyone is entitled in full equality to a fair and public hearing by an independent and impartial tribunal, in the determination of his rights and obligations and of any criminal charge against him. No one shall be subjected to arbitrary interference with his privacy, family, home or correspondence, nor to attacks upon his honour and reputation. Everyone has the right to the protection of the law against such interference or attacks. Everyone has the right to freedom of thought, conscience and religion; this right includes freedom to change his religion or belief, and freedom, either alone or in community with others and in public or private, to manifest his religion or belief in teaching, practice, worship and observance. Everyone has the right to freedom of opinion and expression; this right includes freedom to hold opinions without interference and to seek, receive and impart information and ideas through any media and regardless of frontiers. Everyone has the right to rest and leisure, including reasonable limitation of working hours and periodic holidays with pay."
+                },
+                {
+                    "id": 2,
+                    "active": true,
+                    "title": "Reflection on the Month of June",
+                    "date": "21/06/2022",
+                    "content": "Great content comes with great effort. Any organization on its way to creating a marketing strategy cannot ignore content today. This blog will focus on collating some winning content marketing examples, best practices used in the industry, and content writing tools that will make your job as a content marketer easy.A fantastic visionary that he is, Bill Gates could see deep into the future. In an essay written in 1996, he wrote with conviction about how content is king. In 2022, the COVID-19 pandemic and the resultant “new normal” have drastically changed the way people buy, sell, and work across the globe. Businesses have no option but to adapt and change. This entire situation has propelled the online space to the stature of a marketing hub. We are at a point where leading organizations across the globe are adopting content-led marketing strategies. "
+                },
+                {
+                    "id": 3,
+                    "active": false,
+                    "title": "My Favorite Memories from Childhood",
+                    "date": "11/04/2022",
+                    "content": "Content writing is the art and science of creating content for the digital medium. Yes, you read that right. It is a finely crafted art as much as it is science. Why do we say that? Well, you will agree that writing is an art form. It requires someone to logically and meticulously put together thoughts into a coherent, readable format. But why is it a science? Because every piece of writing needs to have a structure. It must present a point of view in a well-framed, grammatically correct manner. The best content comes from a great mix of these two traits. Organizations use data to analyze customer behavior. They study what their customers are searching for and what kind of content they are likely to consume. Then, this insightful data is used to plan and create relevant and meaningful content for their customers. While science defines what needs to be written, it is the art and craft of writing that helps create highly readable and engaging content."
+                },
+                {
+                    "id": 4,
+                    "active": false,
+                    "title": "Reflections on My First Year of College",
+                    "date": "08/04/2022",
+                    "content": "While this list does not cover the vast ocean of content writing possibilities, it will give you an idea of what comes within its purview. From technology to recipes, from education to entertainment, from food to science, content can be created for any topic under the sun and beyond. We have already established that content is the key marketing tool for any organization in today’s world. What, when, and who to write for is defined by an organization’s marketing strategy. Organizations or individuals setting out to make their mark must ensure that their content is customer-centric. This calls for a deep understanding of customer behavior, both online and offline. Brands have moved away from talking about what they can do for their customers. Instead, they speak about what the customer would like to hear within the context of their brand. In the highly competitive online space, content must be interesting and unusual to retain customer interest. The challenge is to create such content consistently."
+                },
+                {
+                    "id": 5,
+                    "active": false,
+                    "title": "My Experience with Meditation",
+                    "date": "24/03/2022",
+                    "content": "The iconic Amul girl graduated seamlessly from the traditional print advertising medium to the online space. This helped the brand stay connected with their customers while adding a new base of a younger audience. By maintaining the style and tone of its content in the online space, the company has earned the love and respect of its audience. Their communication is always topical, offering a brilliant mix of humor and current affairs. The brand also has frequent contests in its online space to keep its customers engaged and entertained. It is one of the best content writing examples."
+                },
+                {
+                    "id": 6,
+                    "active": false,
+                    "title": "Thoughts on the Pandemic",
+                    "date": "01/02/2021",
+                    "content": "A product of the e-commerce boom in India, Flipkart is a relatively new entrant to the market. However, they are in a highly competitive space, and they understood early on that they must follow the customer journey from research to actual purchase. User-generated content like customer reviews and recommendations forms an integral part of their content strategy. They maintain an active social media presence across all channels and ensure constant interaction with their customers through contests. Their Big Billion Day sale is a brand by itself, and customers withhold their purchases as they wait for this sale, much like the iconic Black Friday sale."
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "active": false,
+            "name": "Finances",
+            "notes": [
+                {
+                    "id": 1,
+                    "active": false,
+                    "title": "5 My Goals for the Next Year",
+                    "date": "31/12/2022",
+                    "content": "No one shall be subjected to arbitrary arrest, detention or exile. Everyone is entitled in full equality to a fair and public hearing by an independent and impartial tribunal, in the determination of his rights and obligations and of any criminal charge against him. No one shall be subjected to arbitrary interference with his privacy, family, home or correspondence, nor to attacks upon his honour and reputation. Everyone has the right to the protection of the law against such interference or attacks. Everyone has the right to freedom of thought, conscience and religion; this right includes freedom to change his religion or belief, and freedom, either alone or in community with others and in public or private, to manifest his religion or belief in teaching, practice, worship and observance. Everyone has the right to freedom of opinion and expression; this right includes freedom to hold opinions without interference and to seek, receive and impart information and ideas through any media and regardless of frontiers. Everyone has the right to rest and leisure, including reasonable limitation of working hours and periodic holidays with pay."
+                },
+                {
+                    "id": 2,
+                    "active": true,
+                    "title": "Reflection on the Month of June",
+                    "date": "21/06/2022",
+                    "content": "Great content comes with great effort. Any organization on its way to creating a marketing strategy cannot ignore content today. This blog will focus on collating some winning content marketing examples, best practices used in the industry, and content writing tools that will make your job as a content marketer easy.A fantastic visionary that he is, Bill Gates could see deep into the future. In an essay written in 1996, he wrote with conviction about how content is king. In 2022, the COVID-19 pandemic and the resultant “new normal” have drastically changed the way people buy, sell, and work across the globe. Businesses have no option but to adapt and change. This entire situation has propelled the online space to the stature of a marketing hub. We are at a point where leading organizations across the globe are adopting content-led marketing strategies. "
+                },
+                {
+                    "id": 3,
+                    "active": false,
+                    "title": "My Favorite Memories from Childhood",
+                    "date": "11/04/2022",
+                    "content": "Content writing is the art and science of creating content for the digital medium. Yes, you read that right. It is a finely crafted art as much as it is science. Why do we say that? Well, you will agree that writing is an art form. It requires someone to logically and meticulously put together thoughts into a coherent, readable format. But why is it a science? Because every piece of writing needs to have a structure. It must present a point of view in a well-framed, grammatically correct manner. The best content comes from a great mix of these two traits. Organizations use data to analyze customer behavior. They study what their customers are searching for and what kind of content they are likely to consume. Then, this insightful data is used to plan and create relevant and meaningful content for their customers. While science defines what needs to be written, it is the art and craft of writing that helps create highly readable and engaging content."
+                },
+                {
+                    "id": 4,
+                    "active": false,
+                    "title": "Reflections on My First Year of College",
+                    "date": "08/04/2022",
+                    "content": "While this list does not cover the vast ocean of content writing possibilities, it will give you an idea of what comes within its purview. From technology to recipes, from education to entertainment, from food to science, content can be created for any topic under the sun and beyond. We have already established that content is the key marketing tool for any organization in today’s world. What, when, and who to write for is defined by an organization’s marketing strategy. Organizations or individuals setting out to make their mark must ensure that their content is customer-centric. This calls for a deep understanding of customer behavior, both online and offline. Brands have moved away from talking about what they can do for their customers. Instead, they speak about what the customer would like to hear within the context of their brand. In the highly competitive online space, content must be interesting and unusual to retain customer interest. The challenge is to create such content consistently."
+                },
+                {
+                    "id": 5,
+                    "active": false,
+                    "title": "My Experience with Meditation",
+                    "date": "24/03/2022",
+                    "content": "The iconic Amul girl graduated seamlessly from the traditional print advertising medium to the online space. This helped the brand stay connected with their customers while adding a new base of a younger audience. By maintaining the style and tone of its content in the online space, the company has earned the love and respect of its audience. Their communication is always topical, offering a brilliant mix of humor and current affairs. The brand also has frequent contests in its online space to keep its customers engaged and entertained. It is one of the best content writing examples."
+                },
+                {
+                    "id": 6,
+                    "active": false,
+                    "title": "Thoughts on the Pandemic",
+                    "date": "01/02/2021",
+                    "content": "A product of the e-commerce boom in India, Flipkart is a relatively new entrant to the market. However, they are in a highly competitive space, and they understood early on that they must follow the customer journey from research to actual purchase. User-generated content like customer reviews and recommendations forms an integral part of their content strategy. They maintain an active social media presence across all channels and ensure constant interaction with their customers through contests. Their Big Billion Day sale is a brand by itself, and customers withhold their purchases as they wait for this sale, much like the iconic Black Friday sale."
+                }
+            ]
+        }
+    ]
+}

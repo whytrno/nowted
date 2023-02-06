@@ -1,9 +1,18 @@
+import React, { useState, useEffect } from "react"
 import Recent from "./sidebar/Recent"
 import Folder from "./sidebar/Folder"
 import FolderPlusIcon from "./sidebar/icons/FolderPlusIcon"
 import More from "./sidebar/More"
+import PlusIcon from "./icon/PlusIcon"
+import data from "../data.json"
+import SearchIcon from "./sidebar/icons/SearchIcon"
+import AddFolder from "./sidebar/AddFolder"
 
-export default function Sidebar() {
+export default function Sidebar({ activeFolder, setActiveFolder }) {
+    const [searchActive, setSearchActive] = useState(false)
+    const [newFolderActive, setNewFolderActive] = useState(false)
+
+    const folders = data.folders
     const recents = [
         {
             active: true,
@@ -19,32 +28,9 @@ export default function Sidebar() {
         },
     ]
 
-    const folders = [
-        {
-            active: true,
-            name: "Personal",
-        },
-        {
-            active: false,
-            name: "Work",
-        },
-        {
-            active: false,
-            name: "Travel",
-        },
-        {
-            active: false,
-            name: "Events",
-        },
-        {
-            active: false,
-            name: "Finances",
-        }
-    ]
-
     return (
-        <div className="w-2.5/12 pt-[30px] space-y-[30px] px-[20px]">
-            <div className="flex justify-between">
+        <div className="w-[20.833333%] pt-[30px] space-y-[30px]">
+            <div className="flex justify-between px-[20px]">
                 <h1 className="font-kaushan flex text-logo gap-[10px]">
                     Nowted
                     <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -58,34 +44,45 @@ export default function Sidebar() {
                         </defs>
                     </svg>
                 </h1>
-                <button>
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g opacity="0.4">
-                            <path d="M9.16667 15.8333C12.8486 15.8333 15.8333 12.8486 15.8333 9.16667C15.8333 5.48477 12.8486 2.5 9.16667 2.5C5.48477 2.5 2.5 5.48477 2.5 9.16667C2.5 12.8486 5.48477 15.8333 9.16667 15.8333Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                            <path d="M17.5 17.5L13.875 13.875" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                        </g>
-                    </svg>
-                </button>
+                <SearchIcon setSearchActive={setSearchActive} searchActive={searchActive} />
             </div>
-            <div className="space-y-[8px]">
-                <h4 className="font-semibold text-sm text-white/60">Recents</h4>
-                {recents.map(recent => (
-                    <Recent active={recent.active} title={recent.title} />
-                ))}
-            </div>
-            <div className="space-y-[8px]">
-                <div className="flex justify-between">
-                    <h4 className="font-semibold text-sm text-white/60">Folders</h4>
-                    <button>
-                        <FolderPlusIcon />
+            {searchActive ? (
+                <div className="px-[20px] transition-all">
+                    <div className="px-[10px] flex gap-[8px] bg-white/5 rounded-[3px]">
+                        <SearchIcon />
+                        <input type="text" placeholder="Search Note" className="py-[10px] bg-transparent text-white/60 font-semibold text-md" />
+                    </div>
+                </div>
+            ) : (
+                <div className="px-[20px]">
+                    <button className="flex gap-[8px] w-full p-[10px] items-center justify-center bg-white/5 rounded-[3px]">
+                        <PlusIcon />
+                        New Note
                     </button>
                 </div>
-                {folders.map(folder => (
-                    <Folder key={folder.name} active={folder.active} name={folder.name} />
+            )}
+            <div className="space-y-[8px]">
+                <h4 className="font-semibold text-sm text-white/60 px-[20px]">Recents</h4>
+                {recents.map(recent => (
+                    <Recent key={recent.title} {...recent} />
                 ))}
             </div>
             <div className="space-y-[8px]">
-                <h4 className="font-semibold text-sm text-white/60">More</h4>
+                <div className="flex justify-between px-[20px]">
+                    <h4 className="font-semibold text-sm text-white/60">Folders</h4>
+                    <button>
+                        <FolderPlusIcon setNewFolderActive={setNewFolderActive} />
+                    </button>
+                </div>
+                {newFolderActive && (
+                    <AddFolder />
+                )}
+                {folders.map(folder => (
+                    <Folder key={folder.id} {...folder} setActiveFolder={setActiveFolder} activeFolder={activeFolder} />
+                ))}
+            </div>
+            <div className="space-y-[8px]">
+                <h4 className="font-semibold text-sm text-white/60 px-[20px]">More</h4>
                 <More />
             </div>
         </div>

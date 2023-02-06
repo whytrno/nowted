@@ -17,13 +17,16 @@ module.exports = {
       },
       fontFamily: {
         "kaushan": ["Kaushan Script", "cursive"],
+        "source": ["Source Sans Pro", "sans-serif"],
       },
       fontSize: {
         "logo": "26px",
         "sm": "14px",
         "md": "16px",
         "lg": "18px",
-        "xl": "32px",
+        "xl": "22px",
+        "2xl": "28px",
+        "3xl": "32px",
       }
     },
   },

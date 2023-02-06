@@ -1,6 +1,7 @@
-export default function FolderPlusIcon() {
+export default function FolderPlusIcon({ setNewFolderActive }) {
     return (
         <svg
+            onClick={() => setNewFolderActive(true)}
             xmlns="http://www.w3.org/2000/svg"
             width="20"
             height="20"
