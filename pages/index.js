@@ -7,7 +7,7 @@ import NoteEditorActive from "@/components/NoteEditorActive";
 import CloseIcon from "@/components/icon/CloseIcon";
 
 export async function getServerSideProps(context) {
-  const res = await fetch(`https://${context.req.headers.host}/api/users`)
+  const res = await fetch(`http://${context.req.headers.host}/api/users`)
   const userDataRaw = await res.json()
 
   return {
@@ -23,7 +23,7 @@ export default function Home({ userDataRaw }) {
   const [userData, setUserData] = useState(userDataRaw)
   const [notification, setNotification] = useState(false)
   const [message, setMessage] = useState("")
-  const [shortcutModal, setShortcutModal] = useState(false)
+  const [shortcutModal, setShortcutModal] = useState(true)
   const [url, setUrl] = useState("")
 
   useEffect(() => {
@@ -40,7 +40,7 @@ export default function Home({ userDataRaw }) {
   }, [notification])
 
   const fetchData = async (messagePassed) => {
-    const res = await fetch(`https://${url}/api/users`)
+    const res = await fetch(`http://${url}/api/users`)
     const userData = await res.json()
 
     setUserData(userData)
@@ -58,7 +58,7 @@ export default function Home({ userDataRaw }) {
         <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet" />
         <title>Nowted 📖</title>
       </Head>
-      <div className="bg-primary min-h-screen flex text-white font-source relative">
+      <div className="bg-primary min-h-screen grid grid-cols-12 text-white font-source relative">
         <div className={`${notification ? 'top-5' : '-top-40'} transition-all absolute left-0 w-full flex justify-center items-start`}>
           <div className="relative bg-recent-active w-96 z-50 rounded-[6px] flex items-center">
             <button className="absolute top-3 right-3" onClick={() => setNotification(false)}>

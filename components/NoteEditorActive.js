@@ -39,7 +39,8 @@ export default function NoteEditorActive({ activeFolder, activeNote, userData, f
     }
 
     return (
-        <div className="w-[79.17%] p-[50px] space-y-[30px]">
+        // 2xl:w-[79.17%] sm:w-[60%]
+        <div className="p-[50px] space-y-[30px] 2xl:col-span-8 sm:col-span-6">
             <div className="flex justify-between items-center">
                 <h1 onClick={() => setChangeTitle(true)} className={`${changeTitle && 'hidden'} text-3xl font-semibold`}>{note.title}</h1>
                 {changeTitle && (

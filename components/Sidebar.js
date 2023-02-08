@@ -48,8 +48,10 @@ export default function Sidebar({ activeFolder, setActiveFolder, userData, setAc
     }
 
     return (
-        <div className="w-[20.833333%] pt-[30px] space-y-[30px]">
-            <div className="flex justify-between px-[20px]">
+        // 2xl:w-[20.833333%] sm:w-[30%]
+        // <div className="gap-[30px] max-h-screen justify-between py-[30px] 2xl:col-span-2 sm:col-span-3 grid grid-rows-12"></div>
+        <div className="grid grid-rows-12 gap-[30px] py-[20px] max-h-screen 2xl:col-span-2 sm:col-span-3">
+            <div className="flex justify-between px-[20px] items-center row-span-1">
                 <h1 className="font-kaushan flex text-logo gap-[10px]">
                     Nowted
                     <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -66,41 +68,43 @@ export default function Sidebar({ activeFolder, setActiveFolder, userData, setAc
                 <SearchIcon setSearchActive={setSearchActive} searchActive={searchActive} />
             </div>
             {searchActive ? (
-                <div className="px-[20px] transition-all">
+                <div className="px-[20px] transition-all row-span-1">
                     <div className="px-[10px] flex gap-[8px] bg-white/5 rounded-[3px]">
                         <SearchIcon />
                         <input type="text" placeholder="Search Note" className="py-[10px] bg-transparent text-white/60 font-semibold text-md" />
                     </div>
                 </div>
             ) : (
-                <div className="px-[20px]">
+                <div className="px-[20px] row-span-1">
                     <button onClick={addNoteHandler} className="flex gap-[8px] w-full p-[10px] items-center justify-center bg-white/5 rounded-[3px]">
                         <PlusIcon />
                         New Note
                     </button>
                 </div>
             )}
-            <div className="space-y-[8px]">
+            <div className="row-span-3 space-y-[8px]">
                 <h4 className="font-semibold text-sm text-white/60 px-[20px]">Recents</h4>
                 {recents.map(recent => (
                     <Recent key={recent.title} {...recent} />
                 ))}
             </div>
-            <div className="space-y-[8px]">
+            <div className="row-span-5 overflow-auto space-y-[8px]">
                 <div className="flex justify-between px-[20px]">
                     <h4 className="font-semibold text-sm text-white/60">Folders</h4>
                     <button>
                         <FolderPlusIcon setNewFolderActive={setNewFolderActive} newFolderActive={newFolderActive} />
                     </button>
                 </div>
-                {newFolderActive && (
-                    <AddFolder fetchData={fetchData} newFolderActive={newFolderActive} setNewFolderActive={setNewFolderActive} folders={folders} />
-                )}
-                {folders.map((folder, index) => (
-                    <Folder key={index} {...folder} setActiveFolder={setActiveFolder} activeFolder={activeFolder} setActiveNote={setActiveNote} />
-                ))}
+                <div>
+                    {newFolderActive && (
+                        <AddFolder fetchData={fetchData} newFolderActive={newFolderActive} setNewFolderActive={setNewFolderActive} folders={folders} />
+                    )}
+                    {folders.map((folder, index) => (
+                        <Folder key={index} {...folder} setActiveFolder={setActiveFolder} activeFolder={activeFolder} setActiveNote={setActiveNote} />
+                    ))}
+                </div>
             </div>
-            <div className="space-y-[8px]">
+            <div className="row-span-2 space-y-[8px]">
                 <h4 className="font-semibold text-sm text-white/60 px-[20px]">More</h4>
                 <More setShortcutModal={setShortcutModal} />
             </div>
