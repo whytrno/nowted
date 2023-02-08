@@ -31,20 +31,20 @@ export default function Sidebar({ activeFolder, setActiveFolder, userData, setAc
     async function addNoteHandler(e) {
         e.preventDefault()
 
-        const res = await fetch(`/api/users/notes/add/${activeFolder}`, {
+        const folderId = activeFolder
+
+        const res = await fetch(`/api/users/notes/create/${folderId}`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify({
-                title: "New note"
-            })
         })
         const data = await res.json()
 
         await fetchData("Berhasil menambahkan catatan baru")
 
-        setActiveNote(data.note._id)
+        // console.log(data)
+        // setActiveNote(data.note._id)
     }
 
     return (
@@ -74,7 +74,7 @@ export default function Sidebar({ activeFolder, setActiveFolder, userData, setAc
                 </div>
             ) : (
                 <div className="px-[20px]">
-                    <button onClick={() => addNoteHandler} className="flex gap-[8px] w-full p-[10px] items-center justify-center bg-white/5 rounded-[3px]">
+                    <button onClick={addNoteHandler} className="flex gap-[8px] w-full p-[10px] items-center justify-center bg-white/5 rounded-[3px]">
                         <PlusIcon />
                         New Note
                     </button>

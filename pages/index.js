@@ -25,6 +25,15 @@ export default function Home({ userDataRaw }) {
   const [message, setMessage] = useState("")
   const [shortcutModal, setShortcutModal] = useState(false)
 
+  useEffect(() => {
+    // if notification true, it will close after 1 sec
+    if (notification) {
+      setTimeout(() => {
+        setNotification(false)
+      }, 1000)
+    }
+  }, [notification])
+
   const fetchData = async (messagePassed) => {
     const res = await fetch("http://localhost:3000/api/users")
     const userData = await res.json()
