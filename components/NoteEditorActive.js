@@ -3,21 +3,50 @@ import { useState } from "react";
 import DateIcon from "./NoteEditor/icon/DateIcon";
 import MoreIcon from "./NoteEditor/icon/MoreIcon";
 import FolderIcon from "./sidebar/icons/FolderIcon";
-import data from "../data.json"
 import TextEditor from "./TextEditor";
 import StarIcon from "./sidebar/icons/more/StarIcon";
 import ArchiveIcon from "./sidebar/icons/more/ArchiveIcon";
 import TrashIcon from "./sidebar/icons/more/TrashIcon";
 
-export default function NoteEditorActive({ activeFolder, activeNote }) {
-    const folderName = data.folders[activeFolder - 1].name
-    const note = data.folders[activeFolder - 1].notes[activeNote - 1]
+export default function NoteEditorActive({ activeFolder, activeNote, userData, fetchData }) {
+    const folderFilter = userData.folders.filter(folder => folder._id == activeFolder)
+    const folderName = folderFilter[0].name
+    const noteFilter = folderFilter[0].notes.filter(note => note._id == activeNote)
+    const note = noteFilter[0]
+
     const [moreActive, setMoreActive] = useState(false)
+    const [changeTitle, setChangeTitle] = useState(false)
+    const [changedTitle, setChangedTitle] = useState(note.title)
+
+    async function updateHandler(e) {
+        setChangeTitle(false)
+        e.preventDefault();
+
+        const id = note._id
+
+        const res = await fetch(`/api/users/notes/update/title/${id}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                title: changedTitle
+            })
+        })
+        await res.json()
+
+        await fetchData("Berhasil mengubah judul catatan")
+    }
 
     return (
         <div className="w-[79.17%] p-[50px] space-y-[30px]">
             <div className="flex justify-between items-center">
-                <h1 className="text-3xl font-semibold">{note.title}</h1>
+                <h1 onClick={() => setChangeTitle(true)} className={`${changeTitle && 'hidden'} text-3xl font-semibold`}>{note.title}</h1>
+                {changeTitle && (
+                    <form onSubmit={updateHandler} className="w-3/4">
+                        <input type="text" className="bg-transparent text-white/60 text-3xl font-semibold w-full" value={changedTitle} onChange={(e) => setChangedTitle(e.target.value)} />
+                    </form>
+                )}
                 <div onClick={() => setMoreActive(!moreActive)} className="relative cursor-pointer">
                     <MoreIcon active={moreActive} />
                     {moreActive && (
@@ -57,7 +86,7 @@ export default function NoteEditorActive({ activeFolder, activeNote }) {
                     <h5 className="underline">{folderName}</h5>
                 </div>
             </div>
-            <TextEditor content={note.content} />
+            <TextEditor fetchData={fetchData} id={note._id} content={note.content} />
         </div>
     )
 }

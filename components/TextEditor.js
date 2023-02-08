@@ -22,7 +22,8 @@ import UnderlineIcon from './TextEditor/icon/UnderlineIcon'
 import SetHeading from './TextEditor/SetHeading'
 import SetFontSize from './TextEditor/SetFontSize'
 
-export default function TextEditor({ content }) {
+export default function TextEditor({ id, content, fetchData }) {
+    const [contentExport, setContentExport] = useState(content)
     const [typographyModal, setTypographyModal] = useState(false)
     const [typography, setTypography] = useState("Paragraph")
 
@@ -57,7 +58,10 @@ export default function TextEditor({ content }) {
             TableHeader,
             TableCell,
         ],
-        content
+        content,
+        onUpdate: ({ editor }) => {
+            setContentExport(editor.getHTML())
+        },
     })
 
     const setLink = useCallback(() => {
@@ -94,6 +98,22 @@ export default function TextEditor({ content }) {
         if (editor) editor.commands.setContent(content)
     }, [content])
 
+    async function saveHandler(e) {
+        e.preventDefault();
+        const res = await fetch(`/api/users/notes/update/content/${id}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                content: contentExport
+            })
+        })
+        await res.json()
+
+        await fetchData("Berhasil mengubah catatan")
+    }
+
     return (
         <>
             <div className='py-[10px] flex gap-[30px] border-y-[1px] border-white/10'>
@@ -125,7 +145,7 @@ export default function TextEditor({ content }) {
                     {fontSizeModal && (
                         <div className='absolute top-10 left-0 bg-note-active space-y-3 z-50 rounded-[6px]'>
                             {fontSizeList.map((fontSize, index) => (
-                                <SetFontSize key="fontSize" editor={editor} setFontSize={setFontSize} setFontSizeModal={setFontSizeModal} fontSize={fontSize} />
+                                <SetFontSize key={fontSize} editor={editor} setFontSize={setFontSize} setFontSizeModal={setFontSizeModal} fontSize={fontSize} />
                             ))}
                         </div>
                     )}
@@ -151,6 +171,9 @@ export default function TextEditor({ content }) {
                 </div>
                 <button onClick={() => editor.chain().focus().insertTable({ rows: 5, cols: 5, withHeaderRow: true }).run()}>
                     <TableIcon />
+                </button>
+                <button onClick={saveHandler}>
+                    Save
                 </button>
             </div>
             <div>

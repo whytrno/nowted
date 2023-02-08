@@ -1,18 +1,18 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import Recent from "./sidebar/Recent"
 import Folder from "./sidebar/Folder"
 import FolderPlusIcon from "./sidebar/icons/FolderPlusIcon"
 import More from "./sidebar/More"
 import PlusIcon from "./icon/PlusIcon"
-import data from "../data.json"
 import SearchIcon from "./sidebar/icons/SearchIcon"
 import AddFolder from "./sidebar/AddFolder"
 
-export default function Sidebar({ activeFolder, setActiveFolder }) {
+export default function Sidebar({ activeFolder, setActiveFolder, userData, setActiveNote, fetchData }) {
     const [searchActive, setSearchActive] = useState(false)
     const [newFolderActive, setNewFolderActive] = useState(false)
 
-    const folders = data.folders
+    const folders = userData.folders
+
     const recents = [
         {
             active: true,
@@ -71,14 +71,14 @@ export default function Sidebar({ activeFolder, setActiveFolder }) {
                 <div className="flex justify-between px-[20px]">
                     <h4 className="font-semibold text-sm text-white/60">Folders</h4>
                     <button>
-                        <FolderPlusIcon setNewFolderActive={setNewFolderActive} />
+                        <FolderPlusIcon setNewFolderActive={setNewFolderActive} newFolderActive={newFolderActive} />
                     </button>
                 </div>
                 {newFolderActive && (
-                    <AddFolder />
+                    <AddFolder fetchData={fetchData} newFolderActive={newFolderActive} setNewFolderActive={setNewFolderActive} folders={folders} />
                 )}
-                {folders.map(folder => (
-                    <Folder key={folder.id} {...folder} setActiveFolder={setActiveFolder} activeFolder={activeFolder} />
+                {folders.map((folder, index) => (
+                    <Folder key={index} {...folder} setActiveFolder={setActiveFolder} activeFolder={activeFolder} setActiveNote={setActiveNote} />
                 ))}
             </div>
             <div className="space-y-[8px]">
