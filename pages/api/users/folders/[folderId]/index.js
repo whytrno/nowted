@@ -1,4 +1,4 @@
-import connectDB from '@/components/connectDB'
+import ConnectDB from '@/components/ConnectDB'
 import User from '@/models/user'
 
 export default async function getNotes(req, res) {

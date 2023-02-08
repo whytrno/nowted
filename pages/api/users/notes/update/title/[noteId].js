@@ -1,5 +1,5 @@
-import connectDB from '@/components/ConnectDB'
-import User from '@/models/User'
+import ConnectDB from '@/components/ConnectDB'
+import User from '@/models/user'
 
 export default async function update(req, res) {
     if (req.method !== 'PUT') return res.status(400).json({ error: 'Method not allowed.' })
