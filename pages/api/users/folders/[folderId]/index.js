@@ -2,7 +2,7 @@ import connectDB from '@/components/connectDB'
 import User from '@/models/user'
 
 export default async function getNotes(req, res) {
-    await connectDB()
+    await ConnectDB()
 
     const { noteId } = req.query
 

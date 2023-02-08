@@ -1,8 +1,8 @@
-import connectDB from '@/components/connectDB';
+import ConnectDB from '@/components/ConnectDB';
 import User from '@/models/user';
 
 export default async function getAllData(req, res) {
-    await connectDB()
+    await ConnectDB()
 
     const users = await User.findById('63e1066cf9b6b287c8496b4f')
 

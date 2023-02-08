@@ -1,5 +1,5 @@
 import connectDB from '@/components/ConnectDB'
-import User from '@/models/User'
+import User from '@/models/user'
 
 export default async function update(req, res) {
     if (req.method !== 'PUT') return res.status(400).json({ error: 'Method not allowed.' })
@@ -8,7 +8,7 @@ export default async function update(req, res) {
     const { content } = req.body
 
     try {
-        await connectDB()
+        await ConnectDB()
         const user = await User.updateOne(
             { "folders.notes._id": noteId },
             // set operator akan mereplace data yang lama dengan data yang baru

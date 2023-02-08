@@ -7,7 +7,7 @@ export default async function create(req, res) {
     const { folderId } = req.query
 
     try {
-        await connectDB()
+        await ConnectDB()
 
         const date = new Date()
 

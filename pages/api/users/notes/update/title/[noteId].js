@@ -8,7 +8,7 @@ export default async function update(req, res) {
     const { title } = req.body
 
     try {
-        await connectDB()
+        await ConnectDB()
         const user = await User.updateOne(
             { "folders.notes._id": noteId },
             // set operator akan mereplace data yang lama dengan data yang baru
