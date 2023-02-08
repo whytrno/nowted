@@ -6,8 +6,8 @@ import NoteEditor from "@/components/NoteEditor";
 import NoteEditorActive from "@/components/NoteEditorActive";
 import CloseIcon from "@/components/icon/CloseIcon";
 
-export async function getServerSideProps() {
-  const res = await fetch("http://localhost:3000/api/users")
+export async function getServerSideProps(context) {
+  const res = await fetch(`http://${context.req.headers.host}/api/users`)
   const userDataRaw = await res.json()
 
   return {
@@ -24,6 +24,11 @@ export default function Home({ userDataRaw }) {
   const [notification, setNotification] = useState(false)
   const [message, setMessage] = useState("")
   const [shortcutModal, setShortcutModal] = useState(false)
+  const [url, setUrl] = useState("")
+
+  useEffect(() => {
+    setUrl(window.location.host)
+  }, [])
 
   useEffect(() => {
     // if notification true, it will close after 1 sec
@@ -35,7 +40,7 @@ export default function Home({ userDataRaw }) {
   }, [notification])
 
   const fetchData = async (messagePassed) => {
-    const res = await fetch("http://localhost:3000/api/users")
+    const res = await fetch(`http://${url}/api/users`)
     const userData = await res.json()
 
     setUserData(userData)
