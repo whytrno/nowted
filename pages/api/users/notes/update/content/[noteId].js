@@ -1,4 +1,4 @@
-import connectDB from '@/components/ConnectDB'
+import ConnectDB from '@/components/ConnectDB'
 import User from '@/models/user'
 
 export default async function update(req, res) {
