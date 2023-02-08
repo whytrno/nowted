@@ -23,6 +23,7 @@ export default function Home({ userDataRaw }) {
   const [userData, setUserData] = useState(userDataRaw)
   const [notification, setNotification] = useState(false)
   const [message, setMessage] = useState("")
+  const [shortcutModal, setShortcutModal] = useState(false)
 
   const fetchData = async (messagePassed) => {
     const res = await fetch("http://localhost:3000/api/users")
@@ -49,10 +50,56 @@ export default function Home({ userDataRaw }) {
             <button className="absolute top-3 right-3" onClick={() => setNotification(false)}>
               <CloseIcon />
             </button>
-            <p className="p-10 text-lg font-semibold">Berhasil mengubah judul</p>
+            <p className="p-10 text-lg font-semibold">{message}</p>
           </div>
         </div>
-        <Sidebar fetchData={fetchData} userData={userData} setUserData={setUserData} setActiveFolder={setActiveFolder} activeFolder={activeFolder} setActiveNote={setActiveNote} />
+        {shortcutModal && (
+          <div className="absolute top-0 left-0 w-full h-full z-50 flex items-center justify-center">
+            <div className="relative bg-recent-active rounded-[6px]">
+              <button onClick={() => setShortcutModal(false)} className="absolute top-3 right-3">
+                <CloseIcon />
+              </button>
+              <div className="p-10 space-y-8">
+                <h1 className="text-center text-xl font-semibold">SHORTCUT</h1>
+                <div className="flex gap-10">
+                  <ul className="space-y-5">
+                    <li className="flex justify-between items-center gap-5">
+                      <p className="text-sm p-2 bg-primary w-min rounded-[6px] whitespace-nowrap">CTRL + S</p>
+                      <p className="font-semibold">Save Note</p>
+                    </li>
+                    <li className="flex justify-between items-center gap-5">
+                      <p className="text-sm p-2 bg-primary w-min rounded-[6px] whitespace-nowrap">CTRL + I</p>
+                      <p className="font-semibold">Italic</p>
+                    </li>
+                    <li className="flex justify-between items-center gap-5">
+                      <p className="text-sm p-2 bg-primary w-min rounded-[6px] whitespace-nowrap">CTRL + U</p>
+                      <p className="font-semibold">Underline</p>
+                    </li>
+                    <li className="flex justify-between items-center gap-5">
+                      <p className="text-sm p-2 bg-primary w-min rounded-[6px] whitespace-nowrap">CTRL + B</p>
+                      <p className="font-semibold">Bold</p>
+                    </li>
+                  </ul>
+                  <ul className="space-y-5">
+                    <li className="flex justify-between items-center gap-5">
+                      <p className="text-sm p-2 bg-primary w-min rounded-[6px] whitespace-nowrap">CTRL + ALT + 1</p>
+                      <p className="font-semibold">Heading 1</p>
+                    </li>
+                    <li className="flex justify-between items-center gap-5">
+                      <p className="text-sm p-2 bg-primary w-min rounded-[6px] whitespace-nowrap">CTRL + ALT + 2</p>
+                      <p className="font-semibold">Heading 2</p>
+                    </li>
+                    <li className="flex justify-between items-center gap-5">
+                      <p className="text-sm p-2 bg-primary w-min rounded-[6px] whitespace-nowrap">CTRL + ALT + 3</p>
+                      <p className="font-semibold">Heading 3</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+        <Sidebar setShortcutModal={setShortcutModal} fetchData={fetchData} userData={userData} setUserData={setUserData} setActiveFolder={setActiveFolder} activeFolder={activeFolder} setActiveNote={setActiveNote} />
         <NoteList userData={userData} activeFolder={activeFolder} activeNote={activeNote} setActiveNote={setActiveNote} />
         {activeNote ? <NoteEditorActive userData={userData} activeFolder={activeFolder} activeNote={activeNote} fetchData={fetchData} /> : <NoteEditor />}
       </div>

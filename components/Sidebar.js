@@ -7,7 +7,7 @@ import PlusIcon from "./icon/PlusIcon"
 import SearchIcon from "./sidebar/icons/SearchIcon"
 import AddFolder from "./sidebar/AddFolder"
 
-export default function Sidebar({ activeFolder, setActiveFolder, userData, setActiveNote, fetchData }) {
+export default function Sidebar({ activeFolder, setActiveFolder, userData, setActiveNote, fetchData, setShortcutModal }) {
     const [searchActive, setSearchActive] = useState(false)
     const [newFolderActive, setNewFolderActive] = useState(false)
 
@@ -27,6 +27,25 @@ export default function Sidebar({ activeFolder, setActiveFolder, userData, setAc
             title: "Travel itinerary",
         },
     ]
+
+    async function addNoteHandler(e) {
+        e.preventDefault()
+
+        const res = await fetch(`/api/users/notes/add/${activeFolder}`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                title: "New note"
+            })
+        })
+        const data = await res.json()
+
+        await fetchData("Berhasil menambahkan catatan baru")
+
+        setActiveNote(data.note._id)
+    }
 
     return (
         <div className="w-[20.833333%] pt-[30px] space-y-[30px]">
@@ -55,7 +74,7 @@ export default function Sidebar({ activeFolder, setActiveFolder, userData, setAc
                 </div>
             ) : (
                 <div className="px-[20px]">
-                    <button className="flex gap-[8px] w-full p-[10px] items-center justify-center bg-white/5 rounded-[3px]">
+                    <button onClick={() => addNoteHandler} className="flex gap-[8px] w-full p-[10px] items-center justify-center bg-white/5 rounded-[3px]">
                         <PlusIcon />
                         New Note
                     </button>
@@ -83,7 +102,7 @@ export default function Sidebar({ activeFolder, setActiveFolder, userData, setAc
             </div>
             <div className="space-y-[8px]">
                 <h4 className="font-semibold text-sm text-white/60 px-[20px]">More</h4>
-                <More />
+                <More setShortcutModal={setShortcutModal} />
             </div>
         </div>
     )

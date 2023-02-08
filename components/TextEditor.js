@@ -114,6 +114,22 @@ export default function TextEditor({ id, content, fetchData }) {
         await fetchData("Berhasil mengubah catatan")
     }
 
+    const handleKeyPress = (e) => {
+        if (e.ctrlKey && e.key === 's') {
+            e.preventDefault();
+            saveHandler(e)
+        }
+    }
+
+    useEffect(() => {
+        document.addEventListener('keydown', handleKeyPress);
+
+        return () => {
+            document.removeEventListener('keydown', handleKeyPress);
+        };
+
+    }, [handleKeyPress]);
+
     return (
         <>
             <div className='py-[10px] flex gap-[30px] border-y-[1px] border-white/10'>
