@@ -8,7 +8,7 @@ import CloseIcon from "@/components/icon/CloseIcon";
 import { useSession, signIn, signOut } from "next-auth/react"
 
 export async function getServerSideProps(context) {
-  const res = await fetch(`http://${context.req.headers.host}/api/users`)
+  const res = await fetch(`https://${context.req.headers.host}/api/users`)
   const userDataRaw = await res.json()
 
   return {
@@ -50,7 +50,7 @@ export default function Home({ userDataRaw }) {
   }, [notification])
 
   const fetchData = async (messagePassed) => {
-    const res = await fetch(`http://${url}/api/users`)
+    const res = await fetch(`https://${url}/api/users`)
     const userData = await res.json()
 
     setUserData(userData)
