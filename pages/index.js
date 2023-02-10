@@ -5,9 +5,10 @@ import NoteList from "@/components/NoteList";
 import NoteEditor from "@/components/NoteEditor";
 import NoteEditorActive from "@/components/NoteEditorActive";
 import CloseIcon from "@/components/icon/CloseIcon";
+import { useSession, signIn, signOut } from "next-auth/react"
 
 export async function getServerSideProps(context) {
-  const res = await fetch(`https://${context.req.headers.host}/api/users`)
+  const res = await fetch(`http://${context.req.headers.host}/api/users`)
   const userDataRaw = await res.json()
 
   return {
@@ -25,6 +26,15 @@ export default function Home({ userDataRaw }) {
   const [message, setMessage] = useState("")
   const [shortcutModal, setShortcutModal] = useState(true)
   const [url, setUrl] = useState("")
+  const [loggedIn, setLoggedIn] = useState(false)
+
+  const { data: session } = useSession()
+
+  useEffect(() => {
+    if (session) {
+      setLoggedIn(true)
+    }
+  }, [session])
 
   useEffect(() => {
     setUrl(window.location.host)
@@ -40,7 +50,7 @@ export default function Home({ userDataRaw }) {
   }, [notification])
 
   const fetchData = async (messagePassed) => {
-    const res = await fetch(`https://${url}/api/users`)
+    const res = await fetch(`http://${url}/api/users`)
     const userData = await res.json()
 
     setUserData(userData)
@@ -67,7 +77,22 @@ export default function Home({ userDataRaw }) {
             <p className="p-10 text-lg font-semibold">{message}</p>
           </div>
         </div>
-        {shortcutModal && (
+
+        {loggedIn == false && (
+          <div className="absolute top-0 left-0 w-full h-full z-50 flex items-center justify-center">
+            <div className="relative bg-recent-active rounded-[6px]">
+              <div className="p-10 space-y-8">
+                <div className="space-y-1">
+                  <h1 className="text-center text-xl font-semibold">PLEASE LOGIN TO CONTINUE</h1>
+                  <p className="text-sm text-center">You can login with <b>Github</b> or <b>Google</b></p>
+                </div>
+                <button onClick={() => signIn()} className="bg-primary text-white text-lg font-semibold w-full py-3 rounded-[6px]">Login Here</button>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {shortcutModal && loggedIn && (
           <div className="absolute top-0 left-0 w-full h-full z-50 flex items-center justify-center">
             <div className="relative bg-recent-active rounded-[6px]">
               <button onClick={() => setShortcutModal(false)} className="absolute top-3 right-3">
@@ -113,7 +138,7 @@ export default function Home({ userDataRaw }) {
             </div>
           </div>
         )}
-        <Sidebar setShortcutModal={setShortcutModal} fetchData={fetchData} userData={userData} setUserData={setUserData} setActiveFolder={setActiveFolder} activeFolder={activeFolder} setActiveNote={setActiveNote} />
+        <Sidebar session={session} signOut={signOut} loggedIn={loggedIn} setShortcutModal={setShortcutModal} fetchData={fetchData} userData={userData} setUserData={setUserData} setActiveFolder={setActiveFolder} activeFolder={activeFolder} setActiveNote={setActiveNote} />
         <NoteList userData={userData} activeFolder={activeFolder} activeNote={activeNote} setActiveNote={setActiveNote} />
         {activeNote ? <NoteEditorActive userData={userData} activeFolder={activeFolder} activeNote={activeNote} fetchData={fetchData} /> : <NoteEditor />}
       </div>
