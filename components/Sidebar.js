@@ -7,7 +7,7 @@ import PlusIcon from "./icon/PlusIcon"
 import SearchIcon from "./sidebar/icons/SearchIcon"
 import AddFolder from "./sidebar/AddFolder"
 
-export default function Sidebar({ activeFolder, setActiveFolder, userData, setActiveNote, fetchData, setShortcutModal }) {
+export default function Sidebar({ session, signOut, loggedIn, activeFolder, setActiveFolder, userData, setActiveNote, fetchData, setShortcutModal }) {
     const [searchActive, setSearchActive] = useState(false)
     const [newFolderActive, setNewFolderActive] = useState(false)
 
@@ -107,7 +107,7 @@ export default function Sidebar({ activeFolder, setActiveFolder, userData, setAc
             </div>
             <div className="space-y-[8px]">
                 <h4 className="font-semibold text-sm text-white/60 px-[20px]">More</h4>
-                <More setShortcutModal={setShortcutModal} />
+                <More session={session} signOut={signOut} loggedIn={loggedIn} setShortcutModal={setShortcutModal} />
             </div>
         </div>
     )
